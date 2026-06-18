@@ -26,6 +26,29 @@ payload:
   - DOMAIN-SUFFIX,googleusercontent.com
   - DOMAIN-SUFFIX,generativelanguage.googleapis.com
   - DOMAIN-SUFFIX,makersuite.google.com
+  - DOMAIN-KEYWORD,google
+  - DOMAIN-SUFFIX,g.co
+  - DOMAIN-SUFFIX,goo.gl
+  - DOMAIN-SUFFIX,google
+  - DOMAIN-SUFFIX,google.com
+  - DOMAIN-SUFFIX,googleblog.com
+  - DOMAIN-SUFFIX,googlesource.com
+  - DOMAIN-SUFFIX,googlecode.com
+  - DOMAIN-SUFFIX,googlevideo.com
+  - DOMAIN-SUFFIX,googletagmanager.com
+  - DOMAIN-SUFFIX,googlesyndication.com
+  - DOMAIN-SUFFIX,googleadservices.com
+  - DOMAIN-SUFFIX,google-analytics.com
+  - DOMAIN-SUFFIX,doubleclick.net
+  - DOMAIN-SUFFIX,2mdn.net
+  - DOMAIN-SUFFIX,gvt1.com
+  - DOMAIN-SUFFIX,gvt2.com
+  - DOMAIN-SUFFIX,gvt3.com
+  - DOMAIN-SUFFIX,ggpht.com
+  - DOMAIN-SUFFIX,ytimg.com
+  - DOMAIN-SUFFIX,youtube.com
+  - DOMAIN-SUFFIX,youtube-nocookie.com
+  - DOMAIN-SUFFIX,youtu.be
   - DOMAIN-SUFFIX,perplexity.ai
   - DOMAIN-SUFFIX,poe.com
   - DOMAIN-SUFFIX,character.ai

@@ -82,6 +82,9 @@ Rule behavior:
   Alipay, WeChat/Weixin, Douyin, Bilibili, Alibaba/Taobao/Tmall, JD,
   Pinduoduo, Meituan, and common domestic video platforms.
 - Common non-China AI tools go `PROXY` before CN/GEOIP rules are evaluated.
+- Google ecosystem traffic goes `PROXY`, including Google Search, Gemini,
+  Google login/API/CDN/helper domains, YouTube, Google Ads/Analytics helper
+  domains, and Google video/static asset domains.
 - Foreign social media, messaging, collaboration, and developer platforms go
   `PROXY`, including X/Twitter, Instagram, Facebook, Threads, WhatsApp, Signal,
   Slack, Zoom, Skype, Teams, Telegram, Reddit, Discord, LinkedIn, GitHub,
@@ -111,6 +114,12 @@ domains. Gemini client support includes Gemini web/app/API traffic and Google
 login/API dependencies such as `accounts.google.com`,
 `oauth2.googleapis.com`, `googleapis.com`, `gstatic.com`,
 `geministatic.com`, and `googleusercontent.com`.
+
+Google ecosystem routing is intentionally broad. The rules include a
+`DOMAIN-KEYWORD,google` catch-all plus common Google-owned domains that do not
+contain the `google` string, such as `g.co`, `goo.gl`, `youtube.com`,
+`youtu.be`, `ytimg.com`, `googlevideo.com`, `gvt1.com`, `ggpht.com`,
+`doubleclick.net`, and `2mdn.net`.
 
 Unknown non-China domains are still covered by `FINAL,PROXY`. This cannot prove
 coverage of every future AI vendor domain, but the default route is proxy unless
