@@ -55,6 +55,8 @@ Rule behavior:
 - Apple App Store, Apple CDN, Apple ID, and iCloud basics go `DIRECT`, so app
   downloads and updates keep working when the profile is enabled.
 - Common non-China AI tools go `PROXY` before CN/GEOIP rules are evaluated.
+- TradingView goes `PROXY`, including charting, screeners, explore-style pages,
+  widgets, websocket/pushstream, and static assets.
 - China domains and China IPs go `DIRECT`.
 - Everything else goes `PROXY`.
 - Common WebRTC/STUN/TURN endpoints are rejected as a generic privacy guard.
@@ -78,6 +80,13 @@ seen when all Apple CDN traffic goes through the VPN node.
 This means some Apple traffic will not use the VPN while this profile is active.
 That is expected for this rule set.
 
+## TradingView
+
+TradingView is intentionally forced through the proxy before CN/GEOIP rules.
+This helps avoid partial page failures where the main page loads but resources
+for charting, scanners, widgets, or explore-style pages are split across direct
+and proxy paths.
+
 ## Import Steps
 
 1. Keep the actual VLESS Reality node configured locally in Shadowrocket.
@@ -94,4 +103,3 @@ That is expected for this rule set.
   client config files.
 - The profile exposes the VPN server IP because it is needed for direct loop
   prevention. That IP is not an authentication secret, but it is metadata.
-
