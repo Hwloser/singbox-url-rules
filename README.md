@@ -61,9 +61,10 @@ Rule behavior:
   Alipay, WeChat/Weixin, Douyin, Bilibili, Alibaba/Taobao/Tmall, JD,
   Pinduoduo, Meituan, and common domestic video platforms.
 - Common non-China AI tools go `PROXY` before CN/GEOIP rules are evaluated.
-- Foreign social media and developer platforms go `PROXY`, including X/Twitter,
-  Instagram, Facebook, Threads, WhatsApp, Telegram, Reddit, Discord, LinkedIn,
-  GitHub, GitLab, Bitbucket, and Stack Overflow.
+- Foreign social media, messaging, collaboration, and developer platforms go
+  `PROXY`, including X/Twitter, Instagram, Facebook, Threads, WhatsApp, Signal,
+  Slack, Zoom, Skype, Teams, Telegram, Reddit, Discord, LinkedIn, GitHub,
+  GitLab, Bitbucket, and Stack Overflow.
 - TradingView goes `PROXY`, including charting, screeners, explore-style pages,
   widgets, websocket/pushstream, and static assets.
 - Wise, Hong Kong/overseas brokerages, OKX, Binance, and BiyaPay go `PROXY` for
@@ -91,13 +92,14 @@ Unknown non-China domains are still covered by `FINAL,PROXY`. This cannot prove
 coverage of every future AI vendor domain, but the default route is proxy unless
 a rule matches `DIRECT` first.
 
-## Foreign Social and Developer Platforms
+## Foreign Social, Messaging, and Developer Platforms
 
-Foreign social media and developer platforms are intentionally forced through
-the proxy to avoid mixed direct/proxy resource loading and to keep the overseas
-exit consistent. This includes X/Twitter and its media/CDN/helper domains,
-Instagram, Facebook, Threads, WhatsApp, Telegram, Reddit, Discord, LinkedIn,
-GitHub, GitLab, Bitbucket, and Stack Overflow.
+Foreign social media, messaging, collaboration, and developer platforms are
+intentionally forced through the proxy to avoid mixed direct/proxy resource
+loading and to keep the overseas exit consistent. This includes X/Twitter and
+its media/CDN/helper domains, Instagram, Facebook, Threads, WhatsApp, Signal,
+Slack, Zoom, Skype, Teams, Telegram, Reddit, Discord, LinkedIn, GitHub, GitLab,
+Bitbucket, and Stack Overflow.
 
 ## Apple App Store
 
