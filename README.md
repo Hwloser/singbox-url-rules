@@ -31,6 +31,8 @@ Purpose:
 - Keep the VPN server IP direct to avoid proxy loops.
 - Keep common China DNS and DoH endpoints direct, so requests such as
   `223.5.5.5:443` do not go through this VPN node.
+- Keep Apple App Store and Apple CDN downloads direct, so app downloads and
+  updates keep working when the profile is enabled.
 - Keep China domains and China IPs direct.
 - Force common non-China AI tools through the selected proxy before CN/GEOIP
   direct rules are evaluated.
