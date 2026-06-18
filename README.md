@@ -66,8 +66,8 @@ Rule behavior:
   GitHub, GitLab, Bitbucket, and Stack Overflow.
 - TradingView goes `PROXY`, including charting, screeners, explore-style pages,
   widgets, websocket/pushstream, and static assets.
-- Wise, OKX, Binance, and BiyaPay go `PROXY` for route consistency through the
-  same personal VPN exit.
+- Wise, Hong Kong/overseas brokerages, OKX, Binance, and BiyaPay go `PROXY` for
+  route consistency through the same personal VPN exit.
 - China domains and China IPs go `DIRECT`.
 - Everything else goes `PROXY`.
 - Common WebRTC/STUN/TURN endpoints are rejected as a generic privacy guard.
@@ -114,11 +114,13 @@ This helps avoid partial page failures where the main page loads but resources
 for charting, scanners, widgets, or explore-style pages are split across direct
 and proxy paths.
 
-## Financial Services and Crypto Exchanges
+## Financial Services, Brokerages, and Crypto Exchanges
 
-Wise, OKX, Binance, and BiyaPay are intentionally forced through the proxy so
-account sessions, API calls, static resources, and websocket traffic use the
-same personal VPN exit.
+Wise, Hong Kong/overseas brokerages, OKX, Binance, and BiyaPay are intentionally
+forced through the proxy so account sessions, API calls, static resources, and
+websocket traffic use the same personal VPN exit. Brokerages include Longbridge,
+Futu/Futubull, Moomoo, Tiger Brokers, Webull, IBKR, Saxo, Firstrade, uSMART, and
+SoFi HK.
 
 Use this only for a stable fixed exit that you are allowed to use. Do not use it
 to bypass service eligibility, regional restrictions, sanctions, KYC rules, or
