@@ -1,22 +1,29 @@
 # singbox-url-rules
 
-Public-safe remote rule profiles for personal VPN clients.
+Public-safe rule profiles for personal VPN clients.
 
-This repository intentionally does not contain VLESS UUIDs, Reality private keys,
-subscription URLs, or any other proxy credentials.
+This repository only stores client-side routing rules. It intentionally does not
+store VLESS URLs, UUIDs, Reality keys, subscription URLs, ntfy URLs, or any other
+proxy credentials.
 
 ## Shadowrocket
 
-Profile file:
+Profile:
 
 ```text
 shadowrocket/shadowrocket-cn-direct.conf
 ```
 
-Raw URL:
+Recommended import URL:
 
 ```text
 https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/shadowrocket/shadowrocket-cn-direct.conf
+```
+
+Cache-busting URL for immediate refresh after edits:
+
+```text
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/shadowrocket/shadowrocket-cn-direct.conf?cb=2026061802-apple
 ```
 
 Fallback URL:
@@ -25,19 +32,66 @@ Fallback URL:
 https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf
 ```
 
-Purpose:
+jsDelivr mirror:
 
-- Keep private/local addresses direct.
-- Keep the VPN server IP direct to avoid proxy loops.
-- Keep common China DNS and DoH endpoints direct, so requests such as
-  `223.5.5.5:443` do not go through this VPN node.
-- Keep Apple App Store and Apple CDN downloads direct, so app downloads and
-  updates keep working when the profile is enabled.
-- Keep China domains and China IPs direct.
-- Force common non-China AI tools through the selected proxy before CN/GEOIP
-  direct rules are evaluated.
-- Send everything else to the selected proxy.
-- Block common WebRTC/STUN/TURN domains to reduce direct peer-discovery leaks.
+```text
+https://cdn.jsdelivr.net/gh/Hwloser/singbox-url-rules@main/shadowrocket/shadowrocket-cn-direct.conf
+```
 
-Use this as a Shadowrocket remote config/rule profile while keeping the actual
-VLESS Reality node stored locally in Shadowrocket.
+Note: GitHub raw can cache 404 or stale content for a few minutes. jsDelivr can
+cache branch content longer. If an update does not appear immediately, use the
+cache-busting GitHub raw URL first.
+
+## Intended Behavior
+
+Use this profile with your VLESS Reality node stored locally in Shadowrocket.
+
+Rule behavior:
+
+- Private and local networks go `DIRECT`.
+- The VPN server IP goes `DIRECT` to avoid proxy loops.
+- China DNS and DoH endpoints go `DIRECT`, so CN DNS requests such as
+  `223.5.5.5:443` do not hit the VPN node.
+- Apple App Store, Apple CDN, Apple ID, and iCloud basics go `DIRECT`, so app
+  downloads and updates keep working when the profile is enabled.
+- Common non-China AI tools go `PROXY` before CN/GEOIP rules are evaluated.
+- China domains and China IPs go `DIRECT`.
+- Everything else goes `PROXY`.
+- Common WebRTC/STUN/TURN endpoints are rejected as a generic privacy guard.
+
+## AI Traffic
+
+The profile explicitly forces common foreign AI tools through the selected proxy,
+including OpenAI/ChatGPT, Claude, Gemini, Perplexity, Copilot, Cursor,
+Hugging Face, OpenRouter, Mistral, Midjourney, Runway, and related service
+domains.
+
+Unknown non-China domains are still covered by `FINAL,PROXY`. This cannot prove
+coverage of every future AI vendor domain, but the default route is proxy unless
+a rule matches `DIRECT` first.
+
+## Apple App Store
+
+Apple domains are intentionally direct. This avoids App Store download failures
+seen when all Apple CDN traffic goes through the VPN node.
+
+This means some Apple traffic will not use the VPN while this profile is active.
+That is expected for this rule set.
+
+## Import Steps
+
+1. Keep the actual VLESS Reality node configured locally in Shadowrocket.
+2. Add this file as a remote config/profile URL.
+3. Enable rule mode.
+4. Refresh the remote config after changes.
+5. If App Store still fails, disable/re-enable Shadowrocket once so iOS clears
+   the old connection state.
+
+## Security Notes
+
+- This repo is safe to keep public as long as it only contains rules.
+- Do not commit VLESS URLs, UUIDs, Reality private keys, ntfy URLs, or generated
+  client config files.
+- The profile exposes the VPN server IP because it is needed for direct loop
+  prevention. That IP is not an authentication secret, but it is metadata.
+
