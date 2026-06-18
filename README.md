@@ -57,6 +57,9 @@ Rule behavior:
 - Mainland China AI tools go `DIRECT`, including DeepSeek, Kimi, Tongyi/Qwen,
   Doubao, Baidu Wenxin, Tencent Yuanbao/Hunyuan, Zhipu/ChatGLM, MiniMax,
   iFlyTek Spark, Metaso, and similar domestic services.
+- Mainland China apps, payments, video, and commerce go `DIRECT`, including
+  Alipay, WeChat/Weixin, Douyin, Bilibili, Alibaba/Taobao/Tmall, JD,
+  Pinduoduo, Meituan, and common domestic video platforms.
 - Common non-China AI tools go `PROXY` before CN/GEOIP rules are evaluated.
 - TradingView goes `PROXY`, including charting, screeners, explore-style pages,
   widgets, websocket/pushstream, and static assets.
@@ -71,6 +74,10 @@ Rule behavior:
 Mainland China AI services are intentionally direct. This keeps domestic AI
 traffic off the VPN node and avoids routing Chinese AI traffic through the
 overseas exit.
+
+Mainland China daily-use apps are also intentionally direct, especially payment,
+messaging, video, shopping, delivery, and map services. These are domestic
+traffic and should not consume the VPN node.
 
 The profile explicitly forces common foreign AI tools through the selected proxy,
 including OpenAI/ChatGPT, Claude, Gemini, Perplexity, Copilot, Cursor,
