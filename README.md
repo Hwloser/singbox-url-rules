@@ -153,9 +153,10 @@ and proxy paths.
 
 Wise, Hong Kong/overseas brokerages, OKX, Binance, and BiyaPay are intentionally
 forced through the proxy so account sessions, API calls, static resources, and
-websocket traffic use the same personal VPN exit. Brokerages include Longbridge,
-Futu/Futubull, Moomoo, Tiger Brokers, Webull, IBKR, Saxo, Firstrade, uSMART, and
-SoFi HK.
+websocket traffic use the same personal VPN exit. BiyaPay also uses
+`hxdsmy.com` for public static resources, so that domain is proxied with
+BiyaPay. Brokerages include Longbridge, Futu/Futubull, Moomoo, Tiger Brokers,
+Webull, IBKR, Saxo, Firstrade, uSMART, and SoFi HK.
 
 Use this only for a stable fixed exit that you are allowed to use. Do not use it
 to bypass service eligibility, regional restrictions, sanctions, KYC rules, or

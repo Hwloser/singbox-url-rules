@@ -226,6 +226,7 @@ payload:
   - DOMAIN-SUFFIX,bnbstatic.com
   - DOMAIN-SUFFIX,binancecnt.com
   - DOMAIN-SUFFIX,biyapay.com
+  - DOMAIN-SUFFIX,hxdsmy.com
   - DOMAIN-KEYWORD,longbridge
   - DOMAIN-KEYWORD,longport
   - DOMAIN-KEYWORD,futunn
@@ -240,4 +241,5 @@ payload:
   - DOMAIN-KEYWORD,okex
   - DOMAIN-KEYWORD,binance
   - DOMAIN-KEYWORD,biyapay
+  - DOMAIN-KEYWORD,hxdsmy
   - DOMAIN-KEYWORD,transferwise
