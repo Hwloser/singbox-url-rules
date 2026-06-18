@@ -54,6 +54,9 @@ Rule behavior:
   `223.5.5.5:443` do not hit the VPN node.
 - Apple App Store, Apple CDN, Apple ID, and iCloud basics go `DIRECT`, so app
   downloads and updates keep working when the profile is enabled.
+- Mainland China AI tools go `DIRECT`, including DeepSeek, Kimi, Tongyi/Qwen,
+  Doubao, Baidu Wenxin, Tencent Yuanbao/Hunyuan, Zhipu/ChatGLM, MiniMax,
+  iFlyTek Spark, Metaso, and similar domestic services.
 - Common non-China AI tools go `PROXY` before CN/GEOIP rules are evaluated.
 - TradingView goes `PROXY`, including charting, screeners, explore-style pages,
   widgets, websocket/pushstream, and static assets.
@@ -64,6 +67,10 @@ Rule behavior:
 - Common WebRTC/STUN/TURN endpoints are rejected as a generic privacy guard.
 
 ## AI Traffic
+
+Mainland China AI services are intentionally direct. This keeps domestic AI
+traffic off the VPN node and avoids routing Chinese AI traffic through the
+overseas exit.
 
 The profile explicitly forces common foreign AI tools through the selected proxy,
 including OpenAI/ChatGPT, Claude, Gemini, Perplexity, Copilot, Cursor,
