@@ -42,6 +42,27 @@ Note: GitHub raw can cache 404 or stale content for a few minutes. jsDelivr can
 cache branch content longer. If an update does not appear immediately, use the
 cache-busting GitHub raw URL first.
 
+## Clash Verge / Mihomo
+
+Clash Verge cannot directly import the Shadowrocket `.conf` profile. Clash
+Verge uses Clash/Mihomo YAML, so use the Clash-specific rule-provider files:
+
+```text
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/ruleset-reject.yaml
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/ruleset-direct.yaml
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/ruleset-proxy.yaml
+```
+
+Template profile with placeholder node fields:
+
+```text
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/profile-template.yaml
+```
+
+Do not publish a filled Clash Verge profile because it contains VLESS Reality
+credentials. Keep the full client profile private and only publish these rule
+files.
+
 ## Intended Behavior
 
 Use this profile with your VLESS Reality node stored locally in Shadowrocket.
@@ -86,7 +107,10 @@ traffic and should not consume the VPN node.
 The profile explicitly forces common foreign AI tools through the selected proxy,
 including OpenAI/ChatGPT, Claude, Gemini, Perplexity, Copilot, Cursor,
 Hugging Face, OpenRouter, Mistral, Midjourney, Runway, and related service
-domains.
+domains. Gemini client support includes Gemini web/app/API traffic and Google
+login/API dependencies such as `accounts.google.com`,
+`oauth2.googleapis.com`, `googleapis.com`, `gstatic.com`,
+`geministatic.com`, and `googleusercontent.com`.
 
 Unknown non-China domains are still covered by `FINAL,PROXY`. This cannot prove
 coverage of every future AI vendor domain, but the default route is proxy unless

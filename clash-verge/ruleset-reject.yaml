@@ -1,0 +1,11 @@
+payload:
+  - DOMAIN,stun.l.google.com
+  - DOMAIN,stun1.l.google.com
+  - DOMAIN,stun2.l.google.com
+  - DOMAIN,stun3.l.google.com
+  - DOMAIN,stun4.l.google.com
+  - DOMAIN,stun.services.mozilla.com
+  - DOMAIN,stun.cloudflare.com
+  - DOMAIN,global.stun.twilio.com
+  - DOMAIN-SUFFIX,stunprotocol.org
+  - DOMAIN-SUFFIX,turn.cloudflare.com
