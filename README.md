@@ -13,7 +13,13 @@ Profile file:
 shadowrocket/shadowrocket-cn-direct.conf
 ```
 
-Raw URL after pushing to GitHub:
+Raw URL:
+
+```text
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/shadowrocket/shadowrocket-cn-direct.conf
+```
+
+Fallback URL:
 
 ```text
 https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf
