@@ -127,14 +127,27 @@ payload:
   - DOMAIN-SUFFIX,mgtv.com
   - DOMAIN-SUFFIX,miguvideo.com
   - DOMAIN-SUFFIX,meituan.com
+  - DOMAIN-SUFFIX,meituan.net
   - DOMAIN-SUFFIX,dianping.com
   - DOMAIN-SUFFIX,jd.com
   - DOMAIN-SUFFIX,jdcdn.com
   - DOMAIN-SUFFIX,pinduoduo.com
   - DOMAIN-SUFFIX,yangkeduo.com
+  - DOMAIN-SUFFIX,zhihu.com
+  - DOMAIN-SUFFIX,chsi.com.cn
+  - DOMAIN-SUFFIX,163.com
+  - DOMAIN-SUFFIX,wps.cn
+  - DOMAIN-SUFFIX,wpscdn.cn
+  - DOMAIN-SUFFIX,ksord.com
+  - DOMAIN-SUFFIX,ksosoft.com
+  - DOMAIN-SUFFIX,weixinbridge.com
+  - DOMAIN-SUFFIX,amazonaws.com.cn
   - DOMAIN-KEYWORD,alipay
   - DOMAIN-KEYWORD,wechat
   - DOMAIN-KEYWORD,weixin
+  - DOMAIN-KEYWORD,meituan
+  - DOMAIN-KEYWORD,zhihu
+  - DOMAIN-KEYWORD,wps
   - DOMAIN-KEYWORD,douyin
   - DOMAIN-KEYWORD,bilibili
   - DOMAIN-SUFFIX,cn

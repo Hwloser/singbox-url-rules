@@ -80,7 +80,8 @@ Rule behavior:
   iFlyTek Spark, Metaso, and similar domestic services.
 - Mainland China apps, payments, video, and commerce go `DIRECT`, including
   Alipay, WeChat/Weixin, Douyin, Bilibili, Alibaba/Taobao/Tmall, JD,
-  Pinduoduo, Meituan, and common domestic video platforms.
+  Pinduoduo, Meituan, Zhihu, CHSI, 163/Netease, WPS/Kingsoft, and common
+  domestic video platforms.
 - Common non-China AI tools go `PROXY` before CN/GEOIP rules are evaluated.
 - Google ecosystem traffic goes `PROXY`, including Google Search, Gemini,
   Google login/API/CDN/helper domains, YouTube, Google Ads/Analytics helper
