@@ -95,9 +95,9 @@ a rule matches `DIRECT` first.
 
 Foreign social media and developer platforms are intentionally forced through
 the proxy to avoid mixed direct/proxy resource loading and to keep the overseas
-exit consistent. This includes X/Twitter, Instagram, Facebook, Threads,
-WhatsApp, Telegram, Reddit, Discord, LinkedIn, GitHub, GitLab, Bitbucket, and
-Stack Overflow.
+exit consistent. This includes X/Twitter and its media/CDN/helper domains,
+Instagram, Facebook, Threads, WhatsApp, Telegram, Reddit, Discord, LinkedIn,
+GitHub, GitLab, Bitbucket, and Stack Overflow.
 
 ## Apple App Store
 
