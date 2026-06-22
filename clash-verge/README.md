@@ -39,6 +39,15 @@ https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/pro
 The template contains placeholder node fields. Do not publish a filled profile
 because it would expose your VLESS Reality credentials.
 
+If Clash Verge keeps using stale cached providers, replace the provider URLs
+with cache-busting URLs and new local paths:
+
+```text
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026062202-zai
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026062202-zai
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026062202-zai
+```
+
 ## Rule Order
 
 Use this order in a Clash/Mihomo profile:

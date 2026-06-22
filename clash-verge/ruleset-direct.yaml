@@ -70,6 +70,7 @@ payload:
   - DOMAIN-SUFFIX,zhipuai.cn
   - DOMAIN-SUFFIX,chatglm.cn
   - DOMAIN-SUFFIX,bigmodel.cn
+  - DOMAIN-SUFFIX,z.ai
   - DOMAIN-SUFFIX,minimaxi.com
   - DOMAIN-SUFFIX,hailuoai.com
   - DOMAIN-SUFFIX,sensenova.cn
@@ -84,6 +85,7 @@ payload:
   - DOMAIN-KEYWORD,doubao
   - DOMAIN-KEYWORD,zhipuai
   - DOMAIN-KEYWORD,chatglm
+  - DOMAIN-KEYWORD,zhipu
   - DOMAIN-KEYWORD,sparkdesk
   - DOMAIN-KEYWORD,hailuoai
   - DOMAIN-SUFFIX,alipay.com

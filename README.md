@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/shadowrocket/shadowrocket-cn-direct.conf
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062202-zai
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062201-cn-report
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062202-zai
 ```
 
 Fallback URL:
@@ -85,6 +85,8 @@ Rule behavior:
 - Report-observed domestic endpoints go `DIRECT`, including BOSS Zhipin,
   Yupoo, Tonghuashun/10jqka, Duolingo China endpoints, and iCloud China
   endpoints.
+- Z.ai/Zhipu AI goes `DIRECT`; report data showed stale clients were still
+  sending `z.ai` through the node.
 - Common non-China AI tools go `PROXY` before CN/GEOIP rules are evaluated.
 - Google ecosystem traffic goes `PROXY`, including Google Search, Gemini,
   Google login/API/CDN/helper domains, YouTube, Google Ads/Analytics helper
