@@ -49,12 +49,16 @@ rules:
   - DST-PORT,3478,REJECT
   - DST-PORT,5349,REJECT
   - DST-PORT,19302-19309,REJECT
-  - RULE-SET,cn-direct,DIRECT
   - RULE-SET,foreign-proxy,PROXY
+  - RULE-SET,cn-direct,DIRECT
   - GEOSITE,cn,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,PROXY
 ```
+
+The explicit proxy provider must stay before the broad CN direct provider. This
+keeps domains such as Google-owned `.cn` hosts or `okx.com.cn` on the proxy path
+when they are intentionally listed in `foreign-proxy`.
 
 The `foreign-proxy` provider includes explicit Gemini client support for
 Gemini web/app/API traffic and Google login/API dependencies, including

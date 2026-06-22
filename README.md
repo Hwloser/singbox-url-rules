@@ -23,7 +23,7 @@ https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/shadowrocket/sh
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/shadowrocket/shadowrocket-cn-direct.conf?cb=2026061802-apple
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062201-cn-report
 ```
 
 Fallback URL:
@@ -82,6 +82,9 @@ Rule behavior:
   Alipay, WeChat/Weixin, Douyin, Bilibili, Alibaba/Taobao/Tmall, JD,
   Pinduoduo, Meituan, Zhihu, CHSI, 163/Netease, WPS/Kingsoft, and common
   domestic video platforms.
+- Report-observed domestic endpoints go `DIRECT`, including BOSS Zhipin,
+  Yupoo, Tonghuashun/10jqka, Duolingo China endpoints, and iCloud China
+  endpoints.
 - Common non-China AI tools go `PROXY` before CN/GEOIP rules are evaluated.
 - Google ecosystem traffic goes `PROXY`, including Google Search, Gemini,
   Google login/API/CDN/helper domains, YouTube, Google Ads/Analytics helper

@@ -142,12 +142,27 @@ payload:
   - DOMAIN-SUFFIX,ksosoft.com
   - DOMAIN-SUFFIX,weixinbridge.com
   - DOMAIN-SUFFIX,amazonaws.com.cn
+  - DOMAIN,i-resv.meituan.com
+  - DOMAIN-SUFFIX,bosszhipin.com
+  - DOMAIN-SUFFIX,zhipin.com
+  - DOMAIN-SUFFIX,kanzhun.com
+  - DOMAIN-SUFFIX,yupoo.com
+  - DOMAIN-SUFFIX,10jqka.com.cn
+  - DOMAIN-SUFFIX,10jqka.com
+  - DOMAIN-SUFFIX,iwencai.com
+  - DOMAIN-SUFFIX,hexin.cn
+  - DOMAIN-SUFFIX,duolingo.cn
+  - DOMAIN-SUFFIX,icloud.com.cn
   - DOMAIN-KEYWORD,alipay
   - DOMAIN-KEYWORD,wechat
   - DOMAIN-KEYWORD,weixin
   - DOMAIN-KEYWORD,meituan
   - DOMAIN-KEYWORD,zhihu
   - DOMAIN-KEYWORD,wps
+  - DOMAIN-KEYWORD,bosszhipin
+  - DOMAIN-KEYWORD,zhipin
+  - DOMAIN-KEYWORD,yupoo
+  - DOMAIN-KEYWORD,10jqka
   - DOMAIN-KEYWORD,douyin
   - DOMAIN-KEYWORD,bilibili
   - DOMAIN-SUFFIX,cn

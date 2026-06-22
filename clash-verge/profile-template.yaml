@@ -97,8 +97,8 @@ rules:
   - DST-PORT,3478,REJECT
   - DST-PORT,5349,REJECT
   - DST-PORT,19302-19309,REJECT
-  - RULE-SET,cn-direct,DIRECT
   - RULE-SET,foreign-proxy,PROXY
+  - RULE-SET,cn-direct,DIRECT
   - GEOSITE,cn,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,PROXY
