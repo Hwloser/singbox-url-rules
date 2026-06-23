@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062301-hk-direct
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062302-bit-proxy
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062301-hk-direct
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062302-bit-proxy
 ```
 
 Fallback URL:
@@ -100,7 +100,7 @@ Rule behavior:
   GitLab, Bitbucket, and Stack Overflow.
 - TradingView goes `PROXY`, including charting, screeners, explore-style pages,
   widgets, websocket/pushstream, and static assets.
-- Wise, OKX, Binance, and BiyaPay go `PROXY` for
+- Wise, BIT/Bitget, OKX, Binance, and BiyaPay go `PROXY` for
   route consistency through the same personal VPN exit.
 - China domains and China IPs go `DIRECT`.
 - Everything else goes `PROXY`.
@@ -160,12 +160,14 @@ and proxy paths.
 
 ## Financial Services, Brokerages, and Crypto Exchanges
 
-Wise, OKX, Binance, and BiyaPay are intentionally forced through the proxy so
-account sessions, API calls, static resources, and websocket traffic use the
-same personal VPN exit. Hong Kong brokerages are intentionally direct. BiyaPay also uses
+Wise, BIT/Bitget, OKX, Binance, and BiyaPay are intentionally forced through
+the proxy so account sessions, API calls, static resources, and websocket
+traffic use the same personal VPN exit. Hong Kong brokerages are intentionally direct. BiyaPay also uses
 `hxdsmy.com` for public static resources, so that domain is proxied with
-BiyaPay. Hong Kong brokerage app families include Longbridge, Futu/Futubull,
-Moomoo, Tiger Brokers, Webull, uSMART, and SoFi HK.
+BiyaPay. BIT support covers `bit.com` plus related Matrixport/Cactus domains,
+and Bitget support covers `bitget.com` plus common app/static domains. Hong Kong
+brokerage app families include Longbridge, Futu/Futubull, Moomoo, Tiger
+Brokers, Webull, uSMART, and SoFi HK.
 
 Use this only for a stable fixed exit that you are allowed to use. Do not use it
 to bypass service eligibility, regional restrictions, sanctions, KYC rules, or

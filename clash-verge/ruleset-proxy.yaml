@@ -202,6 +202,17 @@ payload:
   - DOMAIN-SUFFIX,binancecnt.com
   - DOMAIN-SUFFIX,biyapay.com
   - DOMAIN-SUFFIX,hxdsmy.com
+  - DOMAIN-SUFFIX,bit.com
+  - DOMAIN-SUFFIX,matrixport.com
+  - DOMAIN-SUFFIX,matrixport.io
+  - DOMAIN-SUFFIX,matrixdock.com
+  - DOMAIN-SUFFIX,mycactus.com
+  - DOMAIN-SUFFIX,bitget.com
+  - DOMAIN-SUFFIX,bitgetapp.com
+  - DOMAIN-SUFFIX,bitget.site
+  - DOMAIN-SUFFIX,bitgetimg.com
+  - DOMAIN-SUFFIX,bgstatic.com
+  - DOMAIN-SUFFIX,bgbstatic.com
   - DOMAIN-KEYWORD,interactivebrokers
   - DOMAIN-KEYWORD,ibkr
   - DOMAIN-KEYWORD,firstrade
@@ -210,4 +221,8 @@ payload:
   - DOMAIN-KEYWORD,binance
   - DOMAIN-KEYWORD,biyapay
   - DOMAIN-KEYWORD,hxdsmy
+  - DOMAIN-KEYWORD,matrixport
+  - DOMAIN-KEYWORD,matrixdock
+  - DOMAIN-KEYWORD,mycactus
+  - DOMAIN-KEYWORD,bitget
   - DOMAIN-KEYWORD,transferwise

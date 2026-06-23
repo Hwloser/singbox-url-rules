@@ -43,9 +43,9 @@ If Clash Verge keeps using stale cached providers, replace the provider URLs
 with cache-busting URLs and new local paths:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026062301-hk-direct
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026062301-hk-direct
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026062301-hk-direct
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026062302-bit-proxy
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026062302-bit-proxy
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026062302-bit-proxy
 ```
 
 ## Rule Order
@@ -58,9 +58,9 @@ rules:
   - DST-PORT,3478,REJECT
   - DST-PORT,5349,REJECT
   - DST-PORT,19302-19309,REJECT
+  - RULE-SET,foreign-proxy,PROXY
   - DOMAIN-SUFFIX,hk,DIRECT
   - GEOIP,HK,DIRECT,no-resolve
-  - RULE-SET,foreign-proxy,PROXY
   - RULE-SET,cn-direct,DIRECT
   - GEOSITE,cn,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
@@ -71,8 +71,9 @@ The explicit proxy provider must stay before the broad CN direct provider. This
 keeps domains such as Google-owned `.cn` hosts or `okx.com.cn` on the proxy path
 when they are intentionally listed in `foreign-proxy`.
 
-The HK direct rules are placed before `foreign-proxy`. This makes `.hk` domains,
-Hong Kong destination IPs, and explicit Hong Kong brokerage app domains direct.
+The explicit proxy provider is placed before the broad HK/CN direct rules. This
+keeps intentionally proxied services such as BIT, Bitget, Wise, OKX, Binance,
+and Google on the proxy path even if they use mixed regional infrastructure.
 
 The `foreign-proxy` provider includes explicit Gemini client support for
 Gemini web/app/API traffic and Google login/API dependencies, including
