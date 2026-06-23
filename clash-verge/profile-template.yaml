@@ -74,22 +74,22 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026062202-zai
-    path: ./ruleset-reject-2026062202.yaml
+    url: https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026062301-hk-direct
+    path: ./ruleset-reject-2026062301.yaml
     interval: 86400
   cn-direct:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026062202-zai
-    path: ./ruleset-direct-2026062202.yaml
+    url: https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026062301-hk-direct
+    path: ./ruleset-direct-2026062301.yaml
     interval: 86400
   foreign-proxy:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026062202-zai
-    path: ./ruleset-proxy-2026062202.yaml
+    url: https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026062301-hk-direct
+    path: ./ruleset-proxy-2026062301.yaml
     interval: 86400
 
 rules:
@@ -97,6 +97,8 @@ rules:
   - DST-PORT,3478,REJECT
   - DST-PORT,5349,REJECT
   - DST-PORT,19302-19309,REJECT
+  - DOMAIN-SUFFIX,hk,DIRECT
+  - GEOIP,HK,DIRECT,no-resolve
   - RULE-SET,foreign-proxy,PROXY
   - RULE-SET,cn-direct,DIRECT
   - GEOSITE,cn,DIRECT

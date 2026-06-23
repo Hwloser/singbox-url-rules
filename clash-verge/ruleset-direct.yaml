@@ -167,4 +167,37 @@ payload:
   - DOMAIN-KEYWORD,10jqka
   - DOMAIN-KEYWORD,douyin
   - DOMAIN-KEYWORD,bilibili
+  - DOMAIN-SUFFIX,hk
+  - DOMAIN-SUFFIX,longbridge.com
+  - DOMAIN-SUFFIX,longbridge.sg
+  - DOMAIN-SUFFIX,longbridge.hk
+  - DOMAIN-SUFFIX,longportapp.com
+  - DOMAIN-SUFFIX,longbridgeapp.com
+  - DOMAIN-SUFFIX,futu.com
+  - DOMAIN-SUFFIX,futu5.com
+  - DOMAIN-SUFFIX,futunn.com
+  - DOMAIN-SUFFIX,futuhk.com
+  - DOMAIN-SUFFIX,futustatic.com
+  - DOMAIN-SUFFIX,futunnopen.com
+  - DOMAIN-SUFFIX,futuholdings.com
+  - DOMAIN-SUFFIX,moomoo.com
+  - DOMAIN-SUFFIX,moomoo.io
+  - DOMAIN-SUFFIX,itiger.com
+  - DOMAIN-SUFFIX,tigerbrokers.com
+  - DOMAIN-SUFFIX,tigerfintech.com
+  - DOMAIN-SUFFIX,webull.com
+  - DOMAIN-SUFFIX,webull.hk
+  - DOMAIN-SUFFIX,webullfintech.com
+  - DOMAIN-SUFFIX,webullapp.com
+  - DOMAIN-SUFFIX,usmartsecurities.com
+  - DOMAIN-SUFFIX,usmart.hk
+  - DOMAIN-SUFFIX,sofi.hk
+  - DOMAIN-KEYWORD,longbridge
+  - DOMAIN-KEYWORD,longport
+  - DOMAIN-KEYWORD,futunn
+  - DOMAIN-KEYWORD,moomoo
+  - DOMAIN-KEYWORD,itiger
+  - DOMAIN-KEYWORD,tigerbrokers
+  - DOMAIN-KEYWORD,webull
+  - DOMAIN-KEYWORD,usmart
   - DOMAIN-SUFFIX,cn

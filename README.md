@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062202-zai
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062301-hk-direct
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062202-zai
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062301-hk-direct
 ```
 
 Fallback URL:
@@ -87,6 +87,9 @@ Rule behavior:
   endpoints.
 - Z.ai/Zhipu AI goes `DIRECT`; report data showed stale clients were still
   sending `z.ai` through the node.
+- Hong Kong domains/IPs go `DIRECT`. Hong Kong brokerage app families such as
+  Longbridge, Futu/Futubull, Moomoo, Tiger Brokers, Webull, uSMART, and SoFi HK
+  are also direct.
 - Common non-China AI tools go `PROXY` before CN/GEOIP rules are evaluated.
 - Google ecosystem traffic goes `PROXY`, including Google Search, Gemini,
   Google login/API/CDN/helper domains, YouTube, Google Ads/Analytics helper
@@ -97,7 +100,7 @@ Rule behavior:
   GitLab, Bitbucket, and Stack Overflow.
 - TradingView goes `PROXY`, including charting, screeners, explore-style pages,
   widgets, websocket/pushstream, and static assets.
-- Wise, Hong Kong/overseas brokerages, OKX, Binance, and BiyaPay go `PROXY` for
+- Wise, OKX, Binance, and BiyaPay go `PROXY` for
   route consistency through the same personal VPN exit.
 - China domains and China IPs go `DIRECT`.
 - Everything else goes `PROXY`.
@@ -157,12 +160,12 @@ and proxy paths.
 
 ## Financial Services, Brokerages, and Crypto Exchanges
 
-Wise, Hong Kong/overseas brokerages, OKX, Binance, and BiyaPay are intentionally
-forced through the proxy so account sessions, API calls, static resources, and
-websocket traffic use the same personal VPN exit. BiyaPay also uses
+Wise, OKX, Binance, and BiyaPay are intentionally forced through the proxy so
+account sessions, API calls, static resources, and websocket traffic use the
+same personal VPN exit. Hong Kong brokerages are intentionally direct. BiyaPay also uses
 `hxdsmy.com` for public static resources, so that domain is proxied with
-BiyaPay. Brokerages include Longbridge, Futu/Futubull, Moomoo, Tiger Brokers,
-Webull, IBKR, Saxo, Firstrade, uSMART, and SoFi HK.
+BiyaPay. Hong Kong brokerage app families include Longbridge, Futu/Futubull,
+Moomoo, Tiger Brokers, Webull, uSMART, and SoFi HK.
 
 Use this only for a stable fixed exit that you are allowed to use. Do not use it
 to bypass service eligibility, regional restrictions, sanctions, KYC rules, or
