@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062401-foreign-saas
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062402-telegram
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062401-foreign-saas
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062402-telegram
 ```
 
 Fallback URL:
@@ -100,7 +100,7 @@ Rule behavior:
   domains, and Google video/static asset domains.
 - Foreign social media, messaging, collaboration, and developer platforms go
   `PROXY`, including X/Twitter, Instagram, Facebook, Threads, WhatsApp, Signal,
-  Slack, Zoom, Skype, Teams, Telegram, Reddit, Discord, LinkedIn, GitHub,
+  Slack, Zoom, Skype, Teams, Telegram/Telegraph, Reddit, Discord, LinkedIn, GitHub,
   GitLab, Bitbucket, and Stack Overflow.
 - TradingView goes `PROXY`, including charting, screeners, explore-style pages,
   widgets, websocket/pushstream, and static assets.
@@ -149,7 +149,8 @@ Foreign social media, messaging, collaboration, and developer platforms are
 intentionally forced through the proxy to avoid mixed direct/proxy resource
 loading and to keep the overseas exit consistent. This includes X/Twitter and
 its media/CDN/helper domains, Instagram, Facebook, Threads, WhatsApp, Signal,
-Slack, Zoom, Skype, Teams, Telegram, Reddit, Discord, LinkedIn, GitHub, GitLab,
+Slack, Zoom, Skype, Teams, Telegram/Telegraph, Reddit, Discord, LinkedIn, GitHub,
+GitLab,
 Bitbucket, and Stack Overflow.
 
 ## Apple App Store

@@ -231,7 +231,12 @@ payload:
   - DOMAIN-SUFFIX,teams.microsoft.com
   - DOMAIN-SUFFIX,teams.live.com
   - DOMAIN-SUFFIX,telegram.org
+  - DOMAIN-SUFFIX,telegram.me
+  - DOMAIN-SUFFIX,telegram.dog
+  - DOMAIN-SUFFIX,telegram-cdn.org
   - DOMAIN-SUFFIX,t.me
+  - DOMAIN-SUFFIX,telegra.ph
+  - DOMAIN-SUFFIX,telesco.pe
   - DOMAIN-SUFFIX,tdesktop.com
   - DOMAIN-SUFFIX,reddit.com
   - DOMAIN-SUFFIX,redd.it
