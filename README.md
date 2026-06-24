@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062302-bit-proxy
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062401-foreign-saas
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062302-bit-proxy
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062401-foreign-saas
 ```
 
 Fallback URL:
@@ -91,6 +91,10 @@ Rule behavior:
   Longbridge, Futu/Futubull, Moomoo, Tiger Brokers, Webull, uSMART, and SoFi HK
   are also direct.
 - Common non-China AI tools go `PROXY` before CN/GEOIP rules are evaluated.
+- Common foreign SaaS, design, developer, storage, payment, and content
+  platforms go `PROXY`, including Notion, Figma, Canva, Dropbox, Atlassian,
+  Airtable, Vercel, Netlify, Docker Hub, npm, PyPI, Stripe, PayPal, Medium,
+  Substack, Wikipedia, Spotify, and Netflix.
 - Google ecosystem traffic goes `PROXY`, including Google Search, Gemini,
   Google login/API/CDN/helper domains, YouTube, Google Ads/Analytics helper
   domains, and Google video/static asset domains.
@@ -135,6 +139,11 @@ coverage of every future AI vendor domain, but the default route is proxy unless
 a rule matches `DIRECT` first.
 
 ## Foreign Social, Messaging, and Developer Platforms
+
+Foreign productivity and SaaS sites are intentionally forced through the proxy
+so their auth, API, static assets, and websocket traffic stay on the same exit.
+This includes Notion and common adjacent tools such as Figma, Canva, Dropbox,
+Atlassian, Airtable, Miro, Linear, Vercel, Netlify, Docker Hub, npm, and PyPI.
 
 Foreign social media, messaging, collaboration, and developer platforms are
 intentionally forced through the proxy to avoid mixed direct/proxy resource

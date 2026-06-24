@@ -43,9 +43,9 @@ If Clash Verge keeps using stale cached providers, replace the provider URLs
 with cache-busting URLs and new local paths:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026062302-bit-proxy
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026062302-bit-proxy
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026062302-bit-proxy
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026062401-foreign-saas
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026062401-foreign-saas
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026062401-foreign-saas
 ```
 
 ## Rule Order
@@ -81,3 +81,8 @@ Gemini web/app/API traffic and Google login/API dependencies, including
 `generativelanguage.googleapis.com`, `accounts.google.com`,
 `oauth2.googleapis.com`, `googleapis.com`, `gstatic.com`,
 `geministatic.com`, and `googleusercontent.com`.
+
+It also explicitly covers common foreign SaaS, design, developer, storage,
+payment, and content platforms such as Notion, Figma, Canva, Dropbox,
+Atlassian, Airtable, Vercel, Netlify, Docker Hub, npm, PyPI, Stripe, PayPal,
+Medium, Substack, Wikipedia, Spotify, and Netflix.
