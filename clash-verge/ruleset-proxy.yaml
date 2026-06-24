@@ -301,6 +301,17 @@ payload:
   - DOMAIN-SUFFIX,bitgetimg.com
   - DOMAIN-SUFFIX,bgstatic.com
   - DOMAIN-SUFFIX,bgbstatic.com
+  - DOMAIN-SUFFIX,plasma.org
+  - DOMAIN-SUFFIX,plasma.to
+  - DOMAIN-SUFFIX,appy.to
+  - DOMAIN-SUFFIX,rain.xyz
+  - DOMAIN-SUFFIX,bridge.xyz
+  - DOMAIN-SUFFIX,privy.io
+  - DOMAIN-SUFFIX,ramp.com
+  - DOMAIN-SUFFIX,zerohash.com
+  - DOMAIN-SUFFIX,fireblocks.com
+  - DOMAIN-SUFFIX,aave.com
+  - DOMAIN-SUFFIX,whop.com
   - DOMAIN-KEYWORD,interactivebrokers
   - DOMAIN-KEYWORD,ibkr
   - DOMAIN-KEYWORD,firstrade
@@ -314,3 +325,4 @@ payload:
   - DOMAIN-KEYWORD,mycactus
   - DOMAIN-KEYWORD,bitget
   - DOMAIN-KEYWORD,transferwise
+  - DOMAIN-KEYWORD,plasma
