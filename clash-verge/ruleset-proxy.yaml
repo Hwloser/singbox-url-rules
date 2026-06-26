@@ -303,6 +303,7 @@ payload:
   - DOMAIN-SUFFIX,bgbstatic.com
   - DOMAIN-SUFFIX,plasma.org
   - DOMAIN-SUFFIX,plasma.to
+  - DOMAIN-SUFFIX,ifastgb.com
   - DOMAIN-SUFFIX,appy.to
   - DOMAIN-SUFFIX,rain.xyz
   - DOMAIN-SUFFIX,bridge.xyz
@@ -326,3 +327,4 @@ payload:
   - DOMAIN-KEYWORD,bitget
   - DOMAIN-KEYWORD,transferwise
   - DOMAIN-KEYWORD,plasma
+  - DOMAIN-KEYWORD,ifastgb

@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062403-plasma
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062601-ifastgb
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062403-plasma
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062601-ifastgb
 ```
 
 Fallback URL:
@@ -104,7 +104,7 @@ Rule behavior:
   GitLab, Bitbucket, and Stack Overflow.
 - TradingView goes `PROXY`, including charting, screeners, explore-style pages,
   widgets, websocket/pushstream, and static assets.
-- Wise, BIT/Bitget, OKX, Binance, BiyaPay, and Plasma One Card go `PROXY` for
+- Wise, BIT/Bitget, OKX, Binance, BiyaPay, Plasma One Card, and iFAST GB go `PROXY` for
   route consistency through the same personal VPN exit.
 - China domains and China IPs go `DIRECT`.
 - Everything else goes `PROXY`.
@@ -150,8 +150,10 @@ intentionally forced through the proxy to avoid mixed direct/proxy resource
 loading and to keep the overseas exit consistent. This includes X/Twitter and
 its media/CDN/helper domains, Instagram, Facebook, Threads, WhatsApp, Signal,
 Slack, Zoom, Skype, Teams, Telegram/Telegraph, Reddit, Discord, LinkedIn, GitHub,
-GitLab,
-Bitbucket, and Stack Overflow.
+GitLab, Bitbucket, and Stack Overflow.
+X/Twitter coverage includes `x.com`, `twitter.com`, short links via `t.co`,
+image/video media via `twimg.com`, and embedded article/widget traffic via
+`publish.twitter.com` and `syndication.twitter.com`.
 
 ## Apple App Store
 
@@ -170,7 +172,7 @@ and proxy paths.
 
 ## Financial Services, Brokerages, and Crypto Exchanges
 
-Wise, BIT/Bitget, OKX, Binance, BiyaPay, and Plasma One Card are intentionally forced through
+Wise, BIT/Bitget, OKX, Binance, BiyaPay, Plasma One Card, and iFAST GB are intentionally forced through
 the proxy so account sessions, API calls, static resources, and websocket
 traffic use the same personal VPN exit. Hong Kong brokerages are intentionally direct. BiyaPay also uses
 `hxdsmy.com` for public static resources, so that domain is proxied with
@@ -182,6 +184,7 @@ Plasma One Card support covers `plasma.org`, `plasma.to`, app download links,
 and the public infrastructure domains listed by Plasma for card/account
 services, including Rain, Bridge, Privy, Ramp, Zerohash, Fireblocks, Aave, and
 Whop.
+iFAST GB support covers `ifastgb.com` plus its static/API subdomains.
 
 Use this only for a stable fixed exit that you are allowed to use. Do not use it
 to bypass service eligibility, regional restrictions, sanctions, KYC rules, or
