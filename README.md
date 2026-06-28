@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062601-ifastgb
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062801-wemeet
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062601-ifastgb
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026062801-wemeet
 ```
 
 Fallback URL:
@@ -82,6 +82,9 @@ Rule behavior:
   Alipay, WeChat/Weixin, Douyin, Bilibili, Alibaba/Taobao/Tmall, JD,
   Pinduoduo, Meituan, Zhihu, CHSI, 163/Netease, WPS/Kingsoft, and common
   domestic video platforms.
+- Tencent Meeting/Wemeet/VooV Meeting goes `DIRECT`. Clash/Mihomo profiles do
+  not use broad port-based STUN/TURN rejects, because those can break meeting
+  audio/video paths.
 - Report-observed domestic endpoints go `DIRECT`, including BOSS Zhipin,
   Yupoo, Tonghuashun/10jqka, Duolingo China endpoints, and iCloud China
   endpoints.
@@ -108,7 +111,7 @@ Rule behavior:
   route consistency through the same personal VPN exit.
 - China domains and China IPs go `DIRECT`.
 - Everything else goes `PROXY`.
-- Common WebRTC/STUN/TURN endpoints are rejected as a generic privacy guard.
+- Common WebRTC/STUN/TURN domains are rejected as a generic privacy guard.
 
 ## AI Traffic
 

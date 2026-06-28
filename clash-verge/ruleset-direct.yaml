@@ -67,6 +67,13 @@ payload:
   - DOMAIN-SUFFIX,baidu.com
   - DOMAIN-SUFFIX,tencent.com
   - DOMAIN-SUFFIX,qq.com
+  - DOMAIN-SUFFIX,meeting.tencent.com
+  - DOMAIN-SUFFIX,wemeet.tencent.com
+  - DOMAIN-SUFFIX,wemeet.qq.com
+  - DOMAIN-SUFFIX,voovmeeting.com
+  - DOMAIN-KEYWORD,tencentmeeting
+  - DOMAIN-KEYWORD,wemeet
+  - DOMAIN-KEYWORD,voovmeeting
   - DOMAIN-SUFFIX,zhipuai.cn
   - DOMAIN-SUFFIX,chatglm.cn
   - DOMAIN-SUFFIX,bigmodel.cn

@@ -43,9 +43,9 @@ If Clash Verge keeps using stale cached providers, replace the provider URLs
 with cache-busting URLs and new local paths:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026062601-ifastgb
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026062601-ifastgb
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026062601-ifastgb
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026062801-wemeet
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026062801-wemeet
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026062801-wemeet
 ```
 
 ## Rule Order
@@ -55,9 +55,6 @@ Use this order in a Clash/Mihomo profile:
 ```yaml
 rules:
   - RULE-SET,privacy-reject,REJECT
-  - DST-PORT,3478,REJECT
-  - DST-PORT,5349,REJECT
-  - DST-PORT,19302-19309,REJECT
   - RULE-SET,foreign-proxy,PROXY
   - DOMAIN-SUFFIX,hk,DIRECT
   - GEOIP,HK,DIRECT,no-resolve
@@ -74,6 +71,11 @@ when they are intentionally listed in `foreign-proxy`.
 The explicit proxy provider is placed before the broad HK/CN direct rules. This
 keeps intentionally proxied services such as BIT, Bitget, Wise, OKX, Binance,
 and Google on the proxy path even if they use mixed regional infrastructure.
+
+Do not add broad `DST-PORT` rejects for STUN/TURN ports such as 3478, 5349, or
+19302-19309 in this Clash/Mihomo profile. They can break legitimate meeting
+apps such as Tencent Meeting/Wemeet/VooV. This ruleset keeps the narrower
+domain-based WebRTC/STUN/TURN reject provider instead.
 
 The `foreign-proxy` provider includes explicit Gemini client support for
 Gemini web/app/API traffic and Google login/API dependencies, including
